@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // $title = 'Hello World';
+    return view('home');
+});
+
+Route::get('/ciao', function () {
+    $title = 'Hello World';
+    return view('ciao', compact('title')); //utilizzata funzione compact
 });
